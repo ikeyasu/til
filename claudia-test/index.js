@@ -1,8 +1,10 @@
-var ApiBuilder = require('claudia-api-builder'),
-    api = new ApiBuilder();
+'use strict'
+
+let ApiBuilder = require('claudia-api-builder');
+let api = new ApiBuilder();
 
 module.exports = api;
 
 api.get('/hello', function () {
-  return 'hello world';
+  return 'hello world 2';
 });
