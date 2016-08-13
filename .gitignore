@@ -39,3 +39,6 @@ jspm_packages
 # Backup files
 *~
 .*.swp
+
+# temporary dir
+tmp/

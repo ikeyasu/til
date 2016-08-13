@@ -4,11 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "create": "npm run build && claudia create --region us-east-1 --api-module index",
+    "build": "babel src/index.js -o index.js",
+    "update": "npm run build && claudia update",
+    "test": "mocha --compilers js:babel-register"
   },
   "author": "Yasuki Ikeuchi",
   "license": "MIT",
   "dependencies": {
     "claudia-api-builder": "^1.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-0": "^6.5.0",
+    "babel-register": "^6.11.6",
+    "mocha": "^3.0.2",
+    "power-assert": "^1.4.1"
   }
 }

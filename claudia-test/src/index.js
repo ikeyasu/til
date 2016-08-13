@@ -1,8 +1,7 @@
 'use strict'
 
-let ApiBuilder = require('claudia-api-builder');
-let api = new ApiBuilder();
-
+import ApiBuilder from 'claudia-api-builder';
+const api = new ApiBuilder();
 module.exports = api;
 
 api.get('/hello', function () {
