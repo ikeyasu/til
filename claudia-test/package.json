@@ -2,16 +2,17 @@
   "name": "claudia-test",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "bundledindex.js",
   "scripts": {
-    "create": "npm run build && claudia create --region us-east-1 --api-module index",
-    "build": "babel src/index.js -o index.js",
+    "create": "npm run build && claudia create --region us-east-1 --api-module bundledindex",
+    "build": "babel src/index.js -o bundledindex.js",
     "update": "npm run build && claudia update",
     "test": "mocha --compilers js:babel-register"
   },
   "author": "Yasuki Ikeuchi",
   "license": "MIT",
   "dependencies": {
+    "aws-sdk": "^2.5.0",
     "claudia-api-builder": "^1.5.1"
   },
   "devDependencies": {
